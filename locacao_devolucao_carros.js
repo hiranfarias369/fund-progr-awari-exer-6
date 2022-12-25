@@ -121,32 +121,32 @@ class Pessoa {
 class Cliente extends Pessoa {
 	constructor(
 		nome,
-		idade,
-		data_nascimento,
-		endereco,
-		telefone_celular,
-		email,
-		cpf,
-		numero_carteira_motorista,
-		foto_carteira_motorista,
-		ano_vencimento_carteira_motorista
+		_idade,
+		_data_nascimento,
+		_endereco,
+		_telefone_celular,
+		_email,
+		_cpf,
+		_numero_carteira_motorista,
+		_foto_carteira_motorista,
+		_ano_vencimento_carteira_motorista
 	) {
 		super(
 			nome,
-			idade,
-			data_nascimento,
-			endereco,
-			telefone_celular,
-			email,
-			cpf,
-			numero_carteira_motorista,
-			foto_carteira_motorista,
-			ano_vencimento_carteira_motorista
+			_idade,
+			_data_nascimento,
+			_endereco,
+			_telefone_celular,
+			_email,
+			_cpf,
+			_numero_carteira_motorista,
+			_foto_carteira_motorista,
+			_ano_vencimento_carteira_motorista
 		);
-		this.cpf = cpf;
-		this.numero_carteira_motorista = numero_carteira_motorista;
-		this.foto_carteira_motorista = foto_carteira_motorista;
-		this.ano_vencimento_carteira_motorista = ano_vencimento_carteira_motorista;
+		this.cpf = _cpf;
+		this.numero_carteira_motorista = _numero_carteira_motorista;
+		this.foto_carteira_motorista = _foto_carteira_motorista;
+		this.ano_vencimento_carteira_motorista = _ano_vencimento_carteira_motorista;
 	}
 }
 const cliente = new Cliente(
@@ -165,41 +165,41 @@ const cliente = new Cliente(
 class Funcionario extends Pessoa {
 	constructor(
 		nome,
-		idade,
-		data_nascimento,
-		endereco,
-		telefone_celular,
-		email,
-		cpf,
-		data_contratacao,
-		salario,
-		quantidade_alugueis,
+		_idade,
+		_data_nascimento,
+		_endereco,
+		_telefone_celular,
+		_email,
+		_cpf,
+		_data_contratacao,
+		_salario,
+		_quantidade_alugueis,
 		status,
-		login,
-		senha
+		_login,
+		_senha
 	) {
 		super(
 			nome,
-			idade,
-			data_nascimento,
-			endereco,
-			telefone_celular,
-			email,
-			cpf,
-			data_contratacao,
-			salario,
-			quantidade_alugueis,
+			_idade,
+			_data_nascimento,
+			_endereco,
+			_telefone_celular,
+			_email,
+			_cpf,
+			_data_contratacao,
+			_salario,
+			_quantidade_alugueis,
 			status,
-			login,
-			senha
+			_login,
+			_senha
 		);
-		this.cpf = cpf;
-		this.data_contratacao = data_contratacao;
-		this.salario = salario;
-		this.quantidade_alugueis = quantidade_alugueis;
+		this.cpf = _cpf;
+		this.data_contratacao = _data_contratacao;
+		this.salario = _salario;
+		this.quantidade_alugueis = _quantidade_alugueis;
 		this.status = status;
-		this.login = login;
-		this.senha = senha;
+		this.login = _login;
+		this.senha = _senha;
 	}
 }
 const funcionario = new Funcionario(
@@ -220,14 +220,14 @@ const funcionario = new Funcionario(
 class Reserva {
 	constructor(
 		cliente,
-		cpf,
+		_cpf,
 		codigo,
 		data_da_retirada,
 		data_da_devolucao,
 		status
 	) {
 		this.cliente = cliente;
-		this.cpf = cpf;
+		this.cpf = _cpf;
 		this.codigo = codigo;
 		this.data_da_retirada = data_da_retirada;
 		this.data_da_devolucao = data_da_devolucao;
