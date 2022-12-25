@@ -1,6 +1,7 @@
 class Carro {
 	constructor(
 		veiculo,
+		placa,
 		ano_de_fabricacao,
 		marca,
 		modelo,
@@ -10,6 +11,7 @@ class Carro {
 		valor_da_diaria
 	) {
 		this.veiculo = veiculo;
+		this.placa = placa;
 		this.ano_de_fabricacao = ano_de_fabricacao;
 		this.marca = marca;
 		this.modelo = modelo;
@@ -45,6 +47,7 @@ class Carro {
 class Utilitario extends Carro {
 	constructor(
 		veiculo,
+		placa,
 		ano_de_fabricacao,
 		marca,
 		modelo,
@@ -58,6 +61,7 @@ class Utilitario extends Carro {
 	) {
 		super(
 			veiculo,
+			placa,
 			ano_de_fabricacao,
 			marca,
 			modelo,
@@ -74,6 +78,7 @@ class Utilitario extends Carro {
 }
 const utilitario = new Utilitario(
 	"CrossFox 1.6",
+	"KKK 2378",
 	"2019",
 	"vokswagem",
 	"utilitário",
@@ -85,10 +90,10 @@ const utilitario = new Utilitario(
 	"180 litros",
 	"9 km/l"
 );
-
 class Esportivo extends Carro {
 	constructor(
 		veiculo,
+		placa,
 		ano_de_fabricacao,
 		marca,
 		modelo,
@@ -100,6 +105,7 @@ class Esportivo extends Carro {
 	) {
 		super(
 			veiculo,
+			placa,
 			ano_de_fabricacao,
 			marca,
 			modelo,
@@ -114,6 +120,7 @@ class Esportivo extends Carro {
 }
 const esportivo = new Esportivo(
 	"Camaro 6.2 Ss",
+	"CAM 1213",
 	"2018",
 	"chevrolet",
 	"esportivo conversível",
@@ -240,8 +247,27 @@ const funcionario = new Funcionario(
 	"excelsa1234",
 	"313113"
 );
+class Reserva {
+	constructor(cliente, cpf, codigo, data_da_retirada, data_da_entrega, status, ) {
+		this.cliente = cliente;
+		this.cpf = cpf;
+		this.codigo = codigo;
+		this.data_da_retirada = data_da_retirada;
+		this.data_da_entrega = data_da_entrega;
+		this.status = status;
+	}
+}
+const reserva = new Reserva(
+	"Zeca G. Caio Pinto",
+	"54678945769",
+	"carro_esportivo",
+	"23/02/2023",
+	"25/02/2023",
+	"Alugado"
+);
 
 console.log(utilitario);
 console.log(esportivo);
 console.log(cliente);
 console.log(funcionario);
+console.log(reserva);
