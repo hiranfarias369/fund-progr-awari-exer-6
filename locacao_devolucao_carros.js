@@ -21,29 +21,6 @@ class Carro {
 		this.valor_da_diaria = valor_da_diaria;
 	}
 }
-// const carro_utilitario = new Carro(
-// 	"Fox 1.6",
-// 	"2019",
-// 	"vokswagem",
-// 	"utilitário",
-// 	"4 portas",
-// 	"prata",
-// 	"12.484",
-// 	"R$ 86.54"
-// );
-//console.log(carro_utilitario);
-
-// const carro_esportivo = new Carro(
-// 	"Camaro 6.2 Ss",
-// 	"2018",
-// 	"chevrolet",
-// 	"esportivo conversível",
-// 	"2 portas",
-// 	"amarelo",
-// 	"32.987",
-// 	"R$ 489.74"
-// );
-//console.log(carro_esportivo);
 class Utilitario extends Carro {
 	constructor(
 		veiculo,
@@ -130,6 +107,7 @@ const esportivo = new Esportivo(
 	"R$ 489.74",
 	"12s"
 );
+
 class Pessoa {
 	constructor(nome, idade, data_nascimento, endereco, telefone_celular, email) {
 		this.nome = nome;
@@ -183,15 +161,7 @@ const cliente = new Cliente(
 	"https://github.com/hiranfarias369",
 	"2032"
 );
-// const pessoa1 = new Pessoa(
-// 	"Yanka",
-// 	"100 anos",
-// 	"12/12/2012",
-// 	"Santa Rita do Passa Quatro, São Paulo",
-// 	"(011) 9 9999-999",
-// 	"yanka@gmail.com"
-// );
-// console.log(pessoa1);
+
 class Funcionario extends Pessoa {
 	constructor(
 		nome,
@@ -248,12 +218,19 @@ const funcionario = new Funcionario(
 	"313113"
 );
 class Reserva {
-	constructor(cliente, cpf, codigo, data_da_retirada, data_da_entrega, status, ) {
+	constructor(
+		cliente,
+		cpf,
+		codigo,
+		data_da_retirada,
+		data_da_devolucao,
+		status
+	) {
 		this.cliente = cliente;
 		this.cpf = cpf;
 		this.codigo = codigo;
 		this.data_da_retirada = data_da_retirada;
-		this.data_da_entrega = data_da_entrega;
+		this.data_da_devolucao = data_da_devolucao;
 		this.status = status;
 	}
 }
@@ -265,9 +242,26 @@ const reserva = new Reserva(
 	"25/02/2023",
 	"Alugado"
 );
+class Promocao {
+	constructor(email, titulo, descricao, data_de_validade, observacao) {
+		this.email = email;
+		this.titulo = titulo;
+		this.descricao = descricao;
+		this.data_de_validade = data_de_validade;
+		this.observacao = observacao;
+	}
+}
+const promocao = new Promocao(
+	"hiranfarias@gmail.com",
+	"Pronto para desfrutar dos melhores carros do mercado!",
+	"Alugue hoje seu utilitário com descontos que podem chegar a 10% e pague em até 10x",
+	"31/12/2022",
+	"consulte a disponibilidade do veículo desejado"
+);
 
 console.log(utilitario);
 console.log(esportivo);
 console.log(cliente);
 console.log(funcionario);
 console.log(reserva);
+console.log(promocao);
