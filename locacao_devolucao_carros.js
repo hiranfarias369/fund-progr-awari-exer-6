@@ -173,19 +173,75 @@ const cliente = new Cliente(
 	"antoniotreze@gmail.com",
 	"82112150120",
 	"2354242531",
-	"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fbr%2Ffoto%2Fmonumento-ao-folclore-sergipano-esculturas-de-personagens-folcl%25C3%25B3ricos-localizados-no-gm1190708941-337644314&psig=AOvVaw25kW1ty5Yn_fUbBjXACcg5&ust=1672071844069000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiAtZOXlfwCFQAAAAAdAAAAABAE",
+	"https://github.com/hiranfarias369",
 	"2032"
 );
-const pessoa1 = new Pessoa(
-	"Yanka",
-	"100 anos",
-	"12/12/2012",
-	"Santa Rita do Passa Quatro, São Paulo",
-	"(011) 9 9999-999",
-	"yanka@gmail.com"
+// const pessoa1 = new Pessoa(
+// 	"Yanka",
+// 	"100 anos",
+// 	"12/12/2012",
+// 	"Santa Rita do Passa Quatro, São Paulo",
+// 	"(011) 9 9999-999",
+// 	"yanka@gmail.com"
+// );
+// console.log(pessoa1);
+class Funcionario extends Pessoa {
+	constructor(
+		nome,
+		idade,
+		data_nascimento,
+		endereco,
+		telefone_celular,
+		email,
+		cpf,
+		data_contratacao,
+		salario,
+		quantidade_alugueis,
+		status,
+		login,
+		senha
+	) {
+		super(
+			nome,
+			idade,
+			data_nascimento,
+			endereco,
+			telefone_celular,
+			email,
+			cpf,
+			data_contratacao,
+			salario,
+			quantidade_alugueis,
+			status,
+			login,
+			senha
+		);
+		this.cpf = cpf;
+		this.data_contratacao = data_contratacao;
+		this.salario = salario;
+		this.quantidade_alugueis = quantidade_alugueis;
+		this.status = status;
+		this.login = login;
+		this.senha = senha;
+	}
+}
+const funcionario = new Funcionario(
+	"Excelsa Teresinha Sulfúrico Cavalcante Silva",
+	"32 anos",
+	"1990",
+	"Rua Borboletas Psicodélicas São Paulo",
+	"(011) 9 987 6543",
+	"excelsasilva@gmail.com",
+	"17646180840",
+	"13/12/2019",
+	"R$ 2.513,13",
+	"800",
+	"ativo",
+	"excelsa1234",
+	"313113"
 );
-//console.log(pessoa1);
 
 console.log(utilitario);
 console.log(esportivo);
 console.log(cliente);
+console.log(funcionario);
